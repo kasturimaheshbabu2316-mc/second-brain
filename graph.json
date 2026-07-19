@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "ad38d063-f489-4e6b-ba9f-61db2761dc31",
+      "label": "Documentation Example",
+      "group": "Areas",
+      "title": "<b>Documentation Example</b><br><i>Areas</i><br>This domain contains information related to health and wellness."
+    },
+    {
+      "id": "e53b714e-62b9-4f39-935b-d85b4c95d4ec",
+      "label": "Force-Directional Graphs",
+      "group": "Areas",
+      "title": "<b>Force-Directional Graphs</b><br><i>Areas</i><br>A note about force-directed graphs, describing their purpose and how they arrange nodes and edges."
+    },
+    {
+      "id": "9c90677c-a7d1-40e3-9d08-25cbacfd6a0b",
+      "label": "High-Dimensional Data Understanding Vector Databases",
+      "group": "Areas",
+      "title": "<b>High-Dimensional Data Understanding Vector Databases</b><br><i>Areas</i><br>Note about Vector Databases."
+    },
+    {
+      "id": "ba8b6ec0-9b6e-4de8-9434-577de9779da2",
+      "label": "Semantic Search Techniques",
+      "group": "Areas",
+      "title": "<b>Semantic Search Techniques</b><br><i>Areas</i><br>The use of vector embeddings and cosine similarity in semantic search for finding concepts with high similarity."
+    },
+    {
+      "id": "ff979f1b-fd0c-4181-b242-fe2bf7ae3093",
+      "label": "Streamlit A Python Library for Building Interactive Web Applications",
+      "group": "Areas",
+      "title": "<b>Streamlit A Python Library for Building Interactive Web Applications</b><br><i>Areas</i><br>Streamlit is a Python library used for building interactive web applications with real-time data."
+    },
+    {
+      "id": "2accddc5-945d-4e13-ab0c-5faf0cd0c0e4",
+      "label": "vis.js Timeline & Graphs",
+      "group": "Areas",
+      "title": "<b>vis.js Timeline & Graphs</b><br><i>Areas</i><br>The vis.js project provides a dynamic, customizable timeline and graphs."
+    },
+    {
+      "id": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
+      "label": "Edge Case Guide Analyzing the SecondSelf Architecture",
+      "group": "Projects",
+      "title": "<b>Edge Case Guide Analyzing the SecondSelf Architecture</b><br><i>Projects</i><br>A guide for categorizing critical edge cases, failure modes, and corner scenarios across the SecondSelf architecture."
+    },
+    {
+      "id": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
+      "label": "SecondSelf Implementation Plan",
+      "group": "Projects",
+      "title": "<b>SecondSelf Implementation Plan</b><br><i>Projects</i><br>The implementation plan outlines the phase-wise development of SecondSelf AI based on a sequential structure."
+    },
+    {
+      "id": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a",
+      "label": "Architecture Design SecondSelf (AI Second Brain) Detailed Plan",
+      "group": "Resources",
+      "title": "<b>Architecture Design SecondSelf (AI Second Brain) Detailed Plan</b><br><i>Resources</i><br>The provided content outlines the end-to-end architecture, technical stack, directory structure, and workflow for a self-organizing AI Second Brain."
+    },
+    {
+      "id": "bea9813f-9fed-4a98-912a-ce9312e63f7f",
+      "label": "Note Title",
+      "group": "Resources",
+      "title": "<b>Note Title</b><br><i>Resources</i><br>A single-sentence, concise summary of the content."
+    },
+    {
+      "id": "a75aeccb-512e-4d3a-bc34-81dfe9aa4bd3",
+      "label": "ParaMentoringSystem",
+      "group": "Resources",
+      "title": "<b>ParaMentoringSystem</b><br><i>Resources</i><br>The ParaMentoring System (PARA) is an active project that helps users organize their digital information."
+    },
+    {
+      "id": "8f5fa4a0-7e02-41aa-a358-19465ef5d2d3",
+      "label": "python.org",
+      "group": "Resources",
+      "title": "<b>python.org</b><br><i>Resources</i><br>Python.org provides downloads for Python sources, installers, tutorials, and guides."
+    },
+    {
+      "id": "00917e2c-1c8b-4236-b6d0-dea95b0ec0cd",
+      "label": "sample_text_for_pipeline",
+      "group": "Resources",
+      "title": "<b>sample_text_for_pipeline</b><br><i>Resources</i><br>A file containing some sample text to be used in a capture pipeline."
+    },
+    {
+      "id": "6cc3ca19-52d2-42a0-83e1-0a684086bf7a",
+      "label": "Test Note",
+      "group": "Resources",
+      "title": "<b>Test Note</b><br><i>Resources</i><br>A single-sentence summary of the content, without including file names or extensions."
+    }
+  ],
+  "edges": [
+    {
+      "from": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
+      "to": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5"
+    },
+    {
+      "from": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
+      "to": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a"
+    },
+    {
+      "from": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
+      "to": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a"
+    }
+  ]
+}
