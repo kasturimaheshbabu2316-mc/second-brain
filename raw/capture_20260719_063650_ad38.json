@@ -1,0 +1,11 @@
+{
+  "id": "ad38d063-f489-4e6b-ba9f-61db2761dc31",
+  "timestamp": "2026-07-19T06:36:50.264757+00:00",
+  "type": "link",
+  "source": "cli-link",
+  "content": "Title: Example Domain\n\nContent:\nExample Domain\nExample Domain\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\nLearn more",
+  "metadata": {
+    "url": "https://example.com",
+    "title": "Example Domain"
+  }
+}

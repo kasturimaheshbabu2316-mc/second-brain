@@ -1,0 +1,11 @@
+{
+  "id": "2accddc5-945d-4e13-ab0c-5faf0cd0c0e4",
+  "timestamp": "2026-07-19T06:37:01.209646+00:00",
+  "type": "link",
+  "source": "cli-link",
+  "content": "Title: vis.js\n\nContent:\nvis.js\nHere is a backup of the old (vis@4.21) website:\nvisjs.github.io/vis/\nNetwork\nDisplay dynamic, automatically organised, customizable network\nviews.\nTimeline\nCreate a fully customizable, interactive timeline with items and\nranges.\nGraph3d\nCreate interactive, animated 3d graphs. Surfaces, lines, dots and\nblock styling out of the box.\nGraph2d\nDraw graphs and bar charts on an interactive timeline and\npersonalize it the way you want.\nDataSet\nManage unstructured data using DataSet. Add, update, and remove\ndata, and listen for changes in the data.\nSponsors\nThis site is maintained by the\nvis.js community\n. Help to\nimprove this page\n!",
+  "metadata": {
+    "url": "https://visjs.org",
+    "title": "vis.js"
+  }
+}

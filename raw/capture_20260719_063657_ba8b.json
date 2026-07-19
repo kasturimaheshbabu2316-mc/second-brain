@@ -1,0 +1,8 @@
+{
+  "id": "ba8b6ec0-9b6e-4de8-9434-577de9779da2",
+  "timestamp": "2026-07-19T06:36:57.716359+00:00",
+  "type": "note",
+  "source": "cli-note",
+  "content": "Semantic search uses vector embeddings and cosine similarity to find documents that are conceptually similar, rather than relying on exact keyword matching.",
+  "metadata": {}
+}
