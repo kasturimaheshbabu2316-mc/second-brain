@@ -1,13 +1,13 @@
 ---
 id: "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f"
-title: "Edge Case Guide Analyzing the SecondSelf Architecture"
-category: "Projects"
-tags: ["edge-case", "edge-cases"]
-summary: "A guide for categorizing critical edge cases, failure modes, and corner scenarios across the SecondSelf architecture."
+title: "A short, descriptive, safe filename title (use only alphanumeric characters, spaces, hyphens, and underscores; do NOT include file extensions)."
+category: "Resources"
+tags: ["edge cases", "corner scenarios"]
+summary: "This document provides a catalog of critical edge cases, failure modes, and corner scenarios across the four development phases of SecondSelf's architecture."
 timestamp: "2026-07-19T06:37:04.079410+00:00"
 type: "file"
 original_file: "C:\\Users\\kastu\\Desktop\\second brain\\doc\\edge-case.md"
-links: ["SecondSelf Implementation Plan", "Architecture Design SecondSelf (AI Second Brain) Detailed Plan"]
+links: ["Categorizing Edge Cases and Corner Scenarios in SecondSelf A Document", "Implementation Plan SecondSelf (AI Second Brain)", "implementation_plan_2023"]
 ---
 
 # Edge Cases and Corner Scenarios: SecondSelf (AI Second Brain)
@@ -143,5 +143,6 @@ This document catalogs critical edge cases, failure modes, and corner scenarios 
   * *Mitigation:* Chunk markdown files during embedding/retrieval (e.g., chunk size 1000 characters) or retrieve only relevant paragraphs/summaries instead of full file content.
 
 ### Related Notes
-- [[SecondSelf Implementation Plan]](file:///C:/Users/kastu/Desktop/second brain/wiki/Projects/SecondSelf Implementation Plan.md)
-- [[Architecture Design SecondSelf (AI Second Brain) Detailed Plan]](file:///C:/Users/kastu/Desktop/second brain/wiki/Resources/Architecture Design SecondSelf (AI Second Brain) Detailed Plan.md)
+- [[Categorizing Edge Cases and Corner Scenarios in SecondSelf A Document]](file:///C:/Users/kastu/Desktop/second brain/wiki/Resources/Categorizing Edge Cases and Corner Scenarios in SecondSelf A Document.md)
+- [[Implementation Plan SecondSelf (AI Second Brain)]](file:///C:/Users/kastu/Desktop/second brain/wiki/Areas/Implementation Plan SecondSelf (AI Second Brain).md)
+- [[implementation_plan_2023]](file:///C:/Users/kastu/Desktop/second brain/wiki/Projects/implementation_plan_2023.md)

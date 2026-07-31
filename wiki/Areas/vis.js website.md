@@ -1,9 +1,9 @@
 ---
 id: "2accddc5-945d-4e13-ab0c-5faf0cd0c0e4"
-title: "vis.js Timeline & Graphs"
+title: "vis.js website"
 category: "Areas"
-tags: ["timeline", "graphs"]
-summary: "The vis.js project provides a dynamic, customizable timeline and graphs."
+tags: ["network", "timeline"]
+summary: "A website with various visualization tools, such as vis.js for creating interactive charts and graph3d, DataSet for managing unstructured data."
 timestamp: "2026-07-19T06:37:01.209646+00:00"
 type: "link"
 links: []

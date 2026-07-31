@@ -1,9 +1,9 @@
 ---
 id: "e53b714e-62b9-4f39-935b-d85b4c95d4ec"
-title: "Force-Directional Graphs"
+title: "Force Directed Graphs"
 category: "Areas"
-tags: ["area1", "area2"]
-summary: "A note about force-directed graphs, describing their purpose and how they arrange nodes and edges."
+tags: ["area: areas"]
+summary: "Force-directed graph simulation is used to arrange nodes and edges with minimized overlaps, highlighting clusters."
 timestamp: "2026-07-19T06:37:02.182742+00:00"
 type: "note"
 links: []

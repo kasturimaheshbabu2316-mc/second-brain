@@ -1,13 +1,13 @@
 ---
 id: "10c417ed-8f52-4b5f-a05c-ff8de33ba17a"
-title: "Architecture Design SecondSelf (AI Second Brain) Detailed Plan"
+title: "architecture-design-secondself"
 category: "Resources"
-tags: ["machine-learning", "web-development", "data-processing"]
-summary: "The provided content outlines the end-to-end architecture, technical stack, directory structure, and workflow for a self-organizing AI Second Brain."
+tags: ["project", "archiving"]
+summary: "Summary of the document provides an overview, technical stack, directory structure, and detailed component design for SecondSelf (AI Second Brain). The user can interact with the application by querying notes in the form of a query. The system captures raw input into a hierarchical architecture that processes knowledge through various phases: capturing, classification, linking, visualizing, and search."
 timestamp: "2026-07-19T06:37:02.760747+00:00"
 type: "file"
 original_file: "C:\\Users\\kastu\\Desktop\\second brain\\doc\\architecture.md"
-links: ["SecondSelf Implementation Plan", "Edge Case Guide Analyzing the SecondSelf Architecture"]
+links: ["Implementation Plan SecondSelf (AI Second Brain)"]
 ---
 
 # Architecture Design: SecondSelf (AI Second Brain)
@@ -172,5 +172,4 @@ second-brain/
 * **UI Tests:** Verify Streamlit app renders correctly, interactive graph loads node events, and Q&A returns accurate citations.
 
 ### Related Notes
-- [[SecondSelf Implementation Plan]](file:///C:/Users/kastu/Desktop/second brain/wiki/Projects/SecondSelf Implementation Plan.md)
-- [[Edge Case Guide Analyzing the SecondSelf Architecture]](file:///C:/Users/kastu/Desktop/second brain/wiki/Projects/Edge Case Guide Analyzing the SecondSelf Architecture.md)
+- [[Implementation Plan SecondSelf (AI Second Brain)]](file:///C:/Users/kastu/Desktop/second brain/wiki/Areas/Implementation Plan SecondSelf (AI Second Brain).md)

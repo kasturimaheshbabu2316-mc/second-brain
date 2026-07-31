@@ -1,13 +1,13 @@
 ---
 id: "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5"
-title: "SecondSelf Implementation Plan"
+title: "implementation_plan_2023"
 category: "Projects"
-tags: ["archive", "database"]
-summary: "The implementation plan outlines the phase-wise development of SecondSelf AI based on a sequential structure."
+tags: ["capture.py", "wiki", "graph"]
+summary: "A project for building a custom capture pipeline using Python and the LLM PARA classifier."
 timestamp: "2026-07-19T06:37:03.330438+00:00"
 type: "file"
 original_file: "C:\\Users\\kastu\\Desktop\\second brain\\doc\\implementation_plan.md"
-links: ["Edge Case Guide Analyzing the SecondSelf Architecture", "Architecture Design SecondSelf (AI Second Brain) Detailed Plan"]
+links: ["Implementation Plan SecondSelf (AI Second Brain)", "A short, descriptive, safe filename title (use only alphanumeric characters, spaces, hyphens, and underscores; do NOT include file extensions)."]
 ---
 
 # Implementation Plan: SecondSelf (AI Second Brain)
@@ -109,5 +109,5 @@ This document maps out the phase-wise implementation plan for building **SecondS
 * Run test queries in the Q&A search bar to verify LLM citation outputs.
 
 ### Related Notes
-- [[Edge Case Guide Analyzing the SecondSelf Architecture]](file:///C:/Users/kastu/Desktop/second brain/wiki/Projects/Edge Case Guide Analyzing the SecondSelf Architecture.md)
-- [[Architecture Design SecondSelf (AI Second Brain) Detailed Plan]](file:///C:/Users/kastu/Desktop/second brain/wiki/Resources/Architecture Design SecondSelf (AI Second Brain) Detailed Plan.md)
+- [[Implementation Plan SecondSelf (AI Second Brain)]](file:///C:/Users/kastu/Desktop/second brain/wiki/Areas/Implementation Plan SecondSelf (AI Second Brain).md)
+- [[A short, descriptive, safe filename title (use only alphanumeric characters, spaces, hyphens, and underscores; do NOT include file extensions).]](file:///C:/Users/kastu/Desktop/second brain/wiki/Resources/A short, descriptive, safe filename title (use only alphanumeric characters, spaces, hyphens, and underscores; do NOT include file extensions)..md)

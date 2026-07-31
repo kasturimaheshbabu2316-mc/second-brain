@@ -1,11 +1,12 @@
-import os
-import sys
-import json
-import re
-import requests
 import argparse
+import json
+import os
+import re
+import sys
 import time
 from datetime import datetime, timezone
+
+import requests
 
 # Configurations
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
@@ -13,6 +14,20 @@ MODEL_NAME = "qwen2.5:0.5b"
 WIKI_DIR = "wiki"
 RAW_DIR = "raw"
 CATEGORIES = ["Projects", "Areas", "Resources", "Archives"]
+
+def load_env() -> dict:
+    env = {}
+    if os.path.exists(".env"):
+        with open(".env", "r") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    env[k.strip()] = v.strip().strip("'\"")
+    return env
+
+ENV_VARS = load_env()
+GEMINI_API_KEY = ENV_VARS.get("GEMINI_API_KEY")
 
 SYSTEM_PROMPT = """You are "The Librarian", the auto-classification engine for the SecondSelf AI Second Brain.
 Analyze the provided content and classify it into one of the four PARA categories:
@@ -51,9 +66,7 @@ def parse_yaml_frontmatter(content: str) -> dict:
                     # Strip quotes or brackets if any
                     if val.startswith("[") and val.endswith("]"):
                         val = [item.strip().strip("'\"") for item in val[1:-1].split(",") if item.strip()]
-                    elif val.startswith('"') and val.endswith('"'):
-                        val = val[1:-1]
-                    elif val.startswith("'") and val.endswith("'"):
+                    elif val.startswith('"') and val.endswith('"') or val.startswith("'") and val.endswith("'"):
                         val = val[1:-1]
                     frontmatter[key] = val
     return frontmatter
@@ -78,46 +91,67 @@ def scan_existing_wiki() -> dict:
                             "category": fm.get("category", ""),
                             "title": fm.get("title", "")
                         }
-                except Exception as e:
+                except Exception as e:  # noqa: BLE001
                     print(f"Warning: Failed to parse existing note {filepath}: {e}", file=sys.stderr)
     return id_map
 
 def classify_content(note_type: str, content: str, metadata: dict) -> dict:
-    """Queries Ollama to classify content and returns structured metadata."""
+    """Queries Gemini (or Ollama fallback) to classify content and returns structured metadata."""
     # Truncate content if it's extremely long to fit prompt window
     content_snippet = content[:6000]
     
     prompt = f"Type: {note_type}\nMetadata: {json.dumps(metadata)}\n\nContent:\n{content_snippet}\n"
     
-    max_retries = 3
-    base_delay = 2
     raw_res = ""
     
-    for attempt in range(max_retries):
+    # Try Google Gemini 1.5 Flash if API key is set
+    if GEMINI_API_KEY:
         try:
-            response = requests.post(
-                OLLAMA_API_URL,
-                json={
-                    "model": MODEL_NAME,
-                    "system": SYSTEM_PROMPT,
-                    "prompt": prompt,
-                    "stream": False,
-                    "format": "json"
-                },
-                timeout=30
-            )
-            response.raise_for_status()
-            res_json = response.json()
-            raw_res = res_json.get("response", "{}").strip()
-            break
-        except Exception as e:
-            if attempt == max_retries - 1:
-                print(f"Warning: Ollama connection failed after {max_retries} attempts: {e}", file=sys.stderr)
-            else:
-                delay = base_delay ** (attempt + 1)
-                print(f"Warning: Ollama query failed ({e}). Retrying in {delay}s...", file=sys.stderr)
-                time.sleep(delay)
-                
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+            payload = {
+                "contents": [
+                    {"role": "user", "parts": [{"text": f"{SYSTEM_PROMPT}\n\n{prompt}"}]}
+                ],
+                "generationConfig": {
+                    "responseMimeType": "application/json"
+                }
+            }
+            res = requests.post(url, json=payload, timeout=20)
+            res.raise_for_status()
+            res_json = res.json()
+            raw_res = res_json["candidates"][0]["content"]["parts"][0]["text"].strip()
+        except Exception as e:  # noqa: BLE001
+            print(f"Warning: Failed to query Gemini API ({e}). Falling back to local Ollama...", file=sys.stderr)
+
+    if not raw_res:
+        # Fallback to Ollama
+        max_retries = 3
+        base_delay = 2
+        for attempt in range(max_retries):
+            try:
+                response = requests.post(
+                    OLLAMA_API_URL,
+                    json={
+                        "model": MODEL_NAME,
+                        "system": SYSTEM_PROMPT,
+                        "prompt": prompt,
+                        "stream": False,
+                        "format": "json"
+                    },
+                    timeout=30
+                )
+                response.raise_for_status()
+                res_json = response.json()
+                raw_res = res_json.get("response", "{}").strip()
+                break
+            except requests.RequestException as e:
+                if attempt == max_retries - 1:
+                    print(f"Warning: Ollama connection failed after {max_retries} attempts: {e}", file=sys.stderr)
+                else:
+                    delay = base_delay ** (attempt + 1)
+                    print(f"Warning: Ollama query failed ({e}). Retrying in {delay}s...", file=sys.stderr)
+                    time.sleep(delay)
+                    
     if raw_res:
         # Strip markdown block formatting if present
         if raw_res.startswith("```"):
@@ -129,7 +163,7 @@ def classify_content(note_type: str, content: str, metadata: dict) -> dict:
             classification = json.loads(raw_res)
             if isinstance(classification, dict):
                 return classification
-        except Exception as e:
+        except json.JSONDecodeError as e:
             print(f"Warning: Failed to parse LLM response JSON ({e}). Response was: {raw_res}", file=sys.stderr)
 
     # Fallback values
@@ -147,7 +181,7 @@ def organize_capture(capture_filepath: str, existing_notes: dict, force: bool = 
     try:
         with open(capture_filepath, "r", encoding="utf-8") as f:
             capture = json.load(f)
-    except Exception as e:
+    except (OSError, json.JSONDecodeError) as e:
         print(f"Error loading {capture_filepath}: {e}", file=sys.stderr)
         return
         
@@ -216,8 +250,8 @@ def organize_capture(capture_filepath: str, existing_notes: dict, force: bool = 
                 existing_fm = parse_yaml_frontmatter(f.read())
             if existing_fm.get("id") == capture_id:
                 break
-        except Exception:
-            pass
+        except Exception as e:  # noqa: BLE001
+            print(f"Warning: Failed to read/parse existing file {target_path} during collision check: {e}", file=sys.stderr)
             
         # Otherwise, append suffix
         filename = f"{clean_title}_{collision_counter}.md"
@@ -250,7 +284,7 @@ type: {note_type}
         try:
             os.remove(old_note_path)
             print(f"Moved note from {old_note_path} to {target_path}")
-        except Exception as e:
+        except OSError as e:
             print(f"Warning: Failed to delete old note {old_note_path}: {e}", file=sys.stderr)
             
     with open(target_path, "w", encoding="utf-8") as f:

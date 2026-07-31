@@ -189,8 +189,8 @@ def load_all_notes() -> list[dict]:
             pass
     return notes
 
-# RAG Search Function
-def rag_query(query: str, notes: list[dict], k: int = 3) -> tuple[str, list[dict]]:
+# RAG Search Function (ask)
+def ask(query: str, notes: list[dict], k: int = 3) -> tuple[str, list[dict]]:
     if not notes:
         return "Your knowledge base is empty. Please capture some notes first.", []
         
@@ -416,12 +416,24 @@ with tab_explore:
                     "Archives": {{ background: '#ADB5BD', border: '#868E96', highlight: {{ background: '#CED4DA', border: '#868E96' }} }}
                 }};
                 
+                // Calculate connection degree for scaling node sizes
+                var degrees = {{}};
+                nodes.forEach(function(node) {{
+                    degrees[node.id] = 0;
+                }});
+                edges.forEach(function(edge) {{
+                    if (degrees[edge.from] !== undefined) degrees[edge.from]++;
+                    if (degrees[edge.to] !== undefined) degrees[edge.to]++;
+                }});
+
                 nodes.forEach(function(node) {{
                     var grp = node.group;
                     if (colors[grp]) {{
                         node.color = colors[grp];
                     }}
                     node.font = {{ color: '#F8FAFC', size: 14 }};
+                    // Scale node size by connection degree (default/min is 1)
+                    node.value = degrees[node.id] || 1;
                     nodes.update(node);
                 }});
                 
@@ -432,6 +444,18 @@ with tab_explore:
                 }};
                 
                 var options = {{
+                    nodes: {{
+                        shape: 'dot',
+                        scaling: {{
+                            min: 12,
+                            max: 32,
+                            label: {{
+                                enabled: true,
+                                min: 12,
+                                max: 20
+                            }}
+                        }}
+                    }},
                     physics: {{
                         solver: 'barnesHut',
                         barnesHut: {{
@@ -490,7 +514,7 @@ with tab_ask:
     
     if query:
         with st.spinner("Synthesizing answer from retrieved context..."):
-            answer, sources = rag_query(query, notes)
+            answer, sources = ask(query, notes)
             st.markdown("#### 💬 Response")
             st.write(answer)
             

@@ -1,102 +1,142 @@
 {
   "nodes": [
     {
-      "id": "ad38d063-f489-4e6b-ba9f-61db2761dc31",
-      "label": "Documentation Example",
+      "id": "afae7ad2-b00b-444f-8dc7-cbdc23d28525",
+      "label": "currently working",
       "group": "Areas",
-      "title": "<b>Documentation Example</b><br><i>Areas</i><br>This domain contains information related to health and wellness."
+      "title": "<b>currently working</b><br><i>Areas</i><br>The author is currently working on their task."
+    },
+    {
+      "id": "4c64146e-6518-4faf-85a2-0b307b4bba87",
+      "label": "current_work",
+      "group": "Areas",
+      "title": "<b>current_work</b><br><i>Areas</i><br>I'm currently working on my tasks."
     },
     {
       "id": "e53b714e-62b9-4f39-935b-d85b4c95d4ec",
-      "label": "Force-Directional Graphs",
+      "label": "Force Directed Graphs",
       "group": "Areas",
-      "title": "<b>Force-Directional Graphs</b><br><i>Areas</i><br>A note about force-directed graphs, describing their purpose and how they arrange nodes and edges."
-    },
-    {
-      "id": "9c90677c-a7d1-40e3-9d08-25cbacfd6a0b",
-      "label": "High-Dimensional Data Understanding Vector Databases",
-      "group": "Areas",
-      "title": "<b>High-Dimensional Data Understanding Vector Databases</b><br><i>Areas</i><br>Note about Vector Databases."
-    },
-    {
-      "id": "ba8b6ec0-9b6e-4de8-9434-577de9779da2",
-      "label": "Semantic Search Techniques",
-      "group": "Areas",
-      "title": "<b>Semantic Search Techniques</b><br><i>Areas</i><br>The use of vector embeddings and cosine similarity in semantic search for finding concepts with high similarity."
-    },
-    {
-      "id": "ff979f1b-fd0c-4181-b242-fe2bf7ae3093",
-      "label": "Streamlit A Python Library for Building Interactive Web Applications",
-      "group": "Areas",
-      "title": "<b>Streamlit A Python Library for Building Interactive Web Applications</b><br><i>Areas</i><br>Streamlit is a Python library used for building interactive web applications with real-time data."
-    },
-    {
-      "id": "2accddc5-945d-4e13-ab0c-5faf0cd0c0e4",
-      "label": "vis.js Timeline & Graphs",
-      "group": "Areas",
-      "title": "<b>vis.js Timeline & Graphs</b><br><i>Areas</i><br>The vis.js project provides a dynamic, customizable timeline and graphs."
-    },
-    {
-      "id": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
-      "label": "Edge Case Guide Analyzing the SecondSelf Architecture",
-      "group": "Projects",
-      "title": "<b>Edge Case Guide Analyzing the SecondSelf Architecture</b><br><i>Projects</i><br>A guide for categorizing critical edge cases, failure modes, and corner scenarios across the SecondSelf architecture."
+      "title": "<b>Force Directed Graphs</b><br><i>Areas</i><br>Force-directed graph simulation is used to arrange nodes and edges with minimized overlaps, highlighting clusters."
     },
     {
       "id": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
-      "label": "SecondSelf Implementation Plan",
-      "group": "Projects",
-      "title": "<b>SecondSelf Implementation Plan</b><br><i>Projects</i><br>The implementation plan outlines the phase-wise development of SecondSelf AI based on a sequential structure."
-    },
-    {
-      "id": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a",
-      "label": "Architecture Design SecondSelf (AI Second Brain) Detailed Plan",
-      "group": "Resources",
-      "title": "<b>Architecture Design SecondSelf (AI Second Brain) Detailed Plan</b><br><i>Resources</i><br>The provided content outlines the end-to-end architecture, technical stack, directory structure, and workflow for a self-organizing AI Second Brain."
-    },
-    {
-      "id": "bea9813f-9fed-4a98-912a-ce9312e63f7f",
-      "label": "Note Title",
-      "group": "Resources",
-      "title": "<b>Note Title</b><br><i>Resources</i><br>A single-sentence, concise summary of the content."
-    },
-    {
-      "id": "a75aeccb-512e-4d3a-bc34-81dfe9aa4bd3",
-      "label": "ParaMentoringSystem",
-      "group": "Resources",
-      "title": "<b>ParaMentoringSystem</b><br><i>Resources</i><br>The ParaMentoring System (PARA) is an active project that helps users organize their digital information."
-    },
-    {
-      "id": "8f5fa4a0-7e02-41aa-a358-19465ef5d2d3",
-      "label": "python.org",
-      "group": "Resources",
-      "title": "<b>python.org</b><br><i>Resources</i><br>Python.org provides downloads for Python sources, installers, tutorials, and guides."
+      "label": "Implementation Plan SecondSelf (AI Second Brain)",
+      "group": "Areas",
+      "title": "<b>Implementation Plan SecondSelf (AI Second Brain)</b><br><i>Areas</i><br>A document describes the planned phase-wise implementation plan for building SecondSelf."
     },
     {
       "id": "00917e2c-1c8b-4236-b6d0-dea95b0ec0cd",
-      "label": "sample_text_for_pipeline",
+      "label": "mock_text_test_file.txt",
+      "group": "Areas",
+      "title": "<b>mock_text_test_file.txt</b><br><i>Areas</i><br>The provided text is a sample of output from a captured pipeline, containing mock text related to productivity and organization."
+    },
+    {
+      "id": "4c64146e-6518-4faf-85a2-0b307b4bba87",
+      "label": "my_work",
+      "group": "Areas",
+      "title": "<b>my_work</b><br><i>Areas</i><br>Today I'm doing work."
+    },
+    {
+      "id": "ba8b6ec0-9b6e-4de8-9434-577de9779da2",
+      "label": "Semantic Search Using Vector Embeddings for Conceptual Similarity",
+      "group": "Areas",
+      "title": "<b>Semantic Search Using Vector Embeddings for Conceptual Similarity</b><br><i>Areas</i><br>The use of vector embeddings and cosine similarity in semantic search methods."
+    },
+    {
+      "id": "ff979f1b-fd0c-4181-b242-fe2bf7ae3093",
+      "label": "Streamlit A Free Python Framework for Data Science and Machine Learning",
+      "group": "Areas",
+      "title": "<b>Streamlit A Free Python Framework for Data Science and Machine Learning</b><br><i>Areas</i><br>Type: note - Streamlit is a free, open-source Python framework that enables developers to create interactive web apps for data science and machine learning."
+    },
+    {
+      "id": "9c90677c-a7d1-40e3-9d08-25cbacfd6a0b",
+      "label": "Vector Databases",
+      "group": "Areas",
+      "title": "<b>Vector Databases</b><br><i>Areas</i><br>Vector databases designed to optimize storage and query performance."
+    },
+    {
+      "id": "2accddc5-945d-4e13-ab0c-5faf0cd0c0e4",
+      "label": "vis.js website",
+      "group": "Areas",
+      "title": "<b>vis.js website</b><br><i>Areas</i><br>A website with various visualization tools, such as vis.js for creating interactive charts and graph3d, DataSet for managing unstructured data."
+    },
+    {
+      "id": "afae7ad2-b00b-444f-8dc7-cbdc23d28525",
+      "label": "working_note",
+      "group": "Areas",
+      "title": "<b>working_note</b><br><i>Areas</i><br>The current task is going to be working on the given content."
+    },
+    {
+      "id": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
+      "label": "implementation_plan_2023",
+      "group": "Projects",
+      "title": "<b>implementation_plan_2023</b><br><i>Projects</i><br>A project for building a custom capture pipeline using Python and the LLM PARA classifier."
+    },
+    {
+      "id": "a75aeccb-512e-4d3a-bc34-81dfe9aa4bd3",
+      "label": "A quick reference",
       "group": "Resources",
-      "title": "<b>sample_text_for_pipeline</b><br><i>Resources</i><br>A file containing some sample text to be used in a capture pipeline."
+      "title": "<b>A quick reference</b><br><i>Resources</i><br>A brief overview of the PARA method."
+    },
+    {
+      "id": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
+      "label": "A short, descriptive, safe filename title (use only alphanumeric characters, spaces, hyphens, and underscores; do NOT include file extensions).",
+      "group": "Resources",
+      "title": "<b>A short, descriptive, safe filename title (use only alphanumeric characters, spaces, hyphens, and underscores; do NOT include file extensions).</b><br><i>Resources</i><br>This document provides a catalog of critical edge cases, failure modes, and corner scenarios across the four development phases of SecondSelf's architecture."
+    },
+    {
+      "id": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a",
+      "label": "architecture-design-secondself",
+      "group": "Resources",
+      "title": "<b>architecture-design-secondself</b><br><i>Resources</i><br>Summary of the document provides an overview, technical stack, directory structure, and detailed component design for SecondSelf (AI Second Brain). The user can interact with the application by querying notes in the form of a query. The system captures raw input into a hierarchical architecture that processes knowledge through various phases: capturing, classification, linking, visualizing, and search."
+    },
+    {
+      "id": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
+      "label": "Categorizing Edge Cases and Corner Scenarios in SecondSelf A Document",
+      "group": "Resources",
+      "title": "<b>Categorizing Edge Cases and Corner Scenarios in SecondSelf A Document</b><br><i>Resources</i><br>This document catalogs critical edge cases, failure modes, and corner scenarios across the four development phases of SecondSelf's architecture."
+    },
+    {
+      "id": "ad38d063-f489-4e6b-ba9f-61db2761dc31",
+      "label": "example_domain",
+      "group": "Resources",
+      "title": "<b>example_domain</b><br><i>Resources</i><br>A short, descriptive, safe filename title."
+    },
+    {
+      "id": "bea9813f-9fed-4a98-912a-ce9312e63f7f",
+      "label": "Note Link Summary",
+      "group": "Resources",
+      "title": "<b>Note Link Summary</b><br><i>Resources</i><br>A brief, organized summary of the content for easy access."
     },
     {
       "id": "6cc3ca19-52d2-42a0-83e1-0a684086bf7a",
-      "label": "Test Note",
+      "label": "Note",
       "group": "Resources",
-      "title": "<b>Test Note</b><br><i>Resources</i><br>A single-sentence summary of the content, without including file names or extensions."
+      "title": "<b>Note</b><br><i>Resources</i><br>A short, descriptive, safe filename title for this content."
+    },
+    {
+      "id": "8f5fa4a0-7e02-41aa-a358-19465ef5d2d3",
+      "label": "Python.org A Guide for Beginners",
+      "group": "Resources",
+      "title": "<b>Python.org A Guide for Beginners</b><br><i>Resources</i><br>Python.org provides information about the Python programming language, including beginner's guide, documentation, and job board."
     }
   ],
   "edges": [
     {
-      "from": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
-      "to": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5"
-    },
-    {
-      "from": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
-      "to": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a"
+      "from": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
+      "to": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f"
     },
     {
       "from": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
       "to": "10c417ed-8f52-4b5f-a05c-ff8de33ba17a"
+    },
+    {
+      "from": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5",
+      "to": "0249fece-d5cc-47a9-b0d1-5b5af5bef1b5"
+    },
+    {
+      "from": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f",
+      "to": "a8ab1fd7-3960-461e-96cf-6cf9f4afd23f"
     }
   ]
 }

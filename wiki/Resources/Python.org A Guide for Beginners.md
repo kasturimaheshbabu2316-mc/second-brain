@@ -1,9 +1,9 @@
 ---
 id: "8f5fa4a0-7e02-41aa-a358-19465ef5d2d3"
-title: "python.org"
+title: "Python.org A Guide for Beginners"
 category: "Resources"
-tags: ["jobs", "python.org"]
-summary: "Python.org provides downloads for Python sources, installers, tutorials, and guides."
+tags: ["jobs"]
+summary: "Python.org provides information about the Python programming language, including beginner's guide, documentation, and job board."
 timestamp: "2026-07-19T06:36:59.453360+00:00"
 type: "link"
 links: []
