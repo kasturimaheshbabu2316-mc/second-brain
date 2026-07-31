@@ -1,14 +1,13 @@
-import os
-import sys
 import json
+import os
 import pathlib
-import urllib.parse
-import subprocess
-import requests
 import re
+import subprocess
+import sys
+
 import numpy as np
+import requests
 import streamlit as st
-from datetime import datetime, timezone
 
 # Load local SentenceTransformer for Q&A embeddings
 try:
@@ -136,7 +135,7 @@ def run_ingestion_pipeline():
         # Run graph exporter
         subprocess.run([sys.executable, "src/graph.py"], check=True)
         return True
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         st.error(f"Pipeline error: {e}")
         return False
 
@@ -156,9 +155,7 @@ def parse_yaml_frontmatter(content: str) -> tuple[dict, str]:
                     v = v.strip()
                     if v.startswith("[") and v.endswith("]"):
                         v = [item.strip().strip("'\"") for item in v[1:-1].split(",") if item.strip()]
-                    elif v.startswith('"') and v.endswith('"'):
-                        v = v[1:-1]
-                    elif v.startswith("'") and v.endswith("'"):
+                    elif v.startswith('"') and v.endswith('"') or v.startswith("'") and v.endswith("'"):
                         v = v[1:-1]
                     frontmatter[k] = v
     return frontmatter, body
@@ -188,7 +185,7 @@ def load_all_notes() -> list[dict]:
                 "body": body_clean,
                 "id": fm.get("id", "")
             })
-        except Exception:
+        except Exception:  # noqa: BLE001, S110
             pass
     return notes
 
@@ -208,7 +205,7 @@ def rag_query(query: str, notes: list[dict], k: int = 3) -> tuple[str, list[dict
         try:
             with open(cache_path, "r") as f:
                 cache = json.load(f)
-        except Exception:
+        except Exception:  # noqa: BLE001, S110
             pass
             
     # Calculate similarities
@@ -267,7 +264,7 @@ def rag_query(query: str, notes: list[dict], k: int = 3) -> tuple[str, list[dict
             res.raise_for_status()
             res_json = res.json()
             response_text = res_json["candidates"][0]["content"]["parts"][0]["text"]
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             st.warning(f"Failed to query Gemini API ({e}). Falling back to local Ollama...")
             
     if not response_text:
@@ -285,12 +282,11 @@ def rag_query(query: str, notes: list[dict], k: int = 3) -> tuple[str, list[dict
             )
             res.raise_for_status()
             response_text = res.json().get("response", "No response received.")
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             response_text = f"Error: Could not query LLM backend (Ollama or Gemini). {e}"
             
     return response_text, top_matches
 
-import re
 
 # App Header
 st.markdown("<div class='brain-header'>SecondSelf</div>", unsafe_allow_html=True)
@@ -336,7 +332,7 @@ with tab_explore:
     graph_file = "graph.json"
     if not os.path.exists(graph_file):
         # Generate initial graph file if missing
-        subprocess.run([sys.executable, "src/graph.py"])
+        subprocess.run([sys.executable, "src/graph.py"])  # noqa: PLW1510
         
     if os.path.exists(graph_file):
         with open(graph_file, "r", encoding="utf-8") as f:
@@ -532,7 +528,7 @@ with tab_capture:
                             if run_ingestion_pipeline():
                                 st.success("Note captured and organized successfully!")
                                 st.rerun()
-                        except Exception as e:
+                        except Exception as e:  # noqa: BLE001
                             st.error(f"Ingestion error: {e}")
                 else:
                     st.warning("Note content cannot be empty.")
@@ -551,7 +547,7 @@ with tab_capture:
                             if run_ingestion_pipeline():
                                 st.success("Link captured, parsed, and organized successfully!")
                                 st.rerun()
-                        except Exception as e:
+                        except Exception as e:  # noqa: BLE001
                             st.error(f"Ingestion error: {e}")
                 else:
                     st.warning("Please provide a valid URL.")
@@ -577,7 +573,7 @@ with tab_capture:
                         if run_ingestion_pipeline():
                             st.success("File processed, categorized, and embedded successfully!")
                             st.rerun()
-                    except Exception as e:
+                    except Exception as e:  # noqa: BLE001
                         st.error(f"Ingestion error: {e}")
 
 # ==================== TAB 4: DIRECTORY ====================

@@ -1,12 +1,13 @@
+import argparse
+import json
 import os
 import sys
-import json
-import uuid
-import argparse
-import requests
-from datetime import datetime, timezone
-from bs4 import BeautifulSoup
 import urllib.parse
+import uuid
+from datetime import datetime, timezone
+
+import requests
+from bs4 import BeautifulSoup
 
 # Configurations
 MAX_FILE_SIZE_BYTES = 2 * 1024 * 1024  # 2MB size limit for text extraction
@@ -102,9 +103,9 @@ def process_link(url: str):
         else:
             content = f"Title: {title}\n\nContent:\n{clean_text}"
             
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"Warning: Failed to fetch full page content ({e}). Logging link metadata only.", file=sys.stderr)
-        content = f"Failed to fetch content for {url}. Error: {str(e)}"
+        content = f"Failed to fetch content for {url}. Error: {e!s}"
         metadata["error"] = str(e)
 
     save_raw_capture(
@@ -163,14 +164,14 @@ def process_file(filepath: str):
             with open(filepath, "r", encoding="latin-1") as f:
                 content = f.read()
                 metadata["status"] = "extracted_latin1"
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             metadata["status"] = "read_failed"
             metadata["error"] = str(e)
             content = f"Failed to read file content for '{filename}' due to encoding errors."
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         metadata["status"] = "read_failed"
         metadata["error"] = str(e)
-        content = f"Failed to read file content for '{filename}'. Error: {str(e)}"
+        content = f"Failed to read file content for '{filename}'. Error: {e!s}"
         
     save_raw_capture(
         capture_type="file",
