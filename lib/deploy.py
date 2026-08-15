@@ -42,7 +42,7 @@ def inject_streamlit_secrets() -> None:
             continue
         try:
             value = str(secrets[key]).strip()
-        except (KeyError, TypeError):
+        except Exception:
             continue
         if value and value != "your_key_here":
             os.environ[key] = value
