@@ -106,6 +106,16 @@ st.markdown("""
 # Helper function to load env
 def load_env() -> dict:
     env = {}
+    # Load from system environment variables first
+    for k, v in os.environ.items():
+        env[k] = v
+    # Load from streamlit secrets if available
+    try:
+        for k in st.secrets:
+            env[k] = st.secrets[k]
+    except Exception:
+        pass
+    # Load from local .env file if it exists
     if os.path.exists(".env"):
         with open(".env", "r") as f:
             for line in f:
@@ -128,12 +138,16 @@ model = load_embedding_model()
 # Helper to execute capture backend pipeline
 def run_ingestion_pipeline():
     try:
+        # Prepare environment passing GEMINI_API_KEY
+        sub_env = os.environ.copy()
+        if GEMINI_API_KEY:
+            sub_env["GEMINI_API_KEY"] = GEMINI_API_KEY
         # Run classification
-        subprocess.run([sys.executable, "src/organize.py"], check=True)
+        subprocess.run([sys.executable, "src/organize.py"], env=sub_env, check=True)
         # Run auto-linker
-        subprocess.run([sys.executable, "src/embeddings.py"], check=True)
+        subprocess.run([sys.executable, "src/embeddings.py"], env=sub_env, check=True)
         # Run graph exporter
-        subprocess.run([sys.executable, "src/graph.py"], check=True)
+        subprocess.run([sys.executable, "src/graph.py"], env=sub_env, check=True)
         return True
     except Exception as e:  # noqa: BLE001
         st.error(f"Pipeline error: {e}")

@@ -17,6 +17,10 @@ CATEGORIES = ["Projects", "Areas", "Resources", "Archives"]
 
 def load_env() -> dict:
     env = {}
+    # Load from system environment variables first
+    for k, v in os.environ.items():
+        env[k] = v
+    # Load from local .env file if it exists
     if os.path.exists(".env"):
         with open(".env", "r") as f:
             for line in f:
