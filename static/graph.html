@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SecondSelf — Knowledge Graph</title>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"
+  ></script>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a222c;
+      --text: #e8eef4;
+      --muted: #8b9aab;
+      --border: #2a3544;
+      --accent: #3d9cf0;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    #stats {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    #legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    #network {
+      width: 100%;
+      height: calc(100% - 52px);
+      background:
+        radial-gradient(ellipse at 20% 10%, #182230 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 90%, #152018 0%, transparent 45%),
+        var(--bg);
+    }
+
+    #message {
+      display: none;
+      position: absolute;
+      inset: 52px 0 0 0;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.1rem;
+      background: var(--bg);
+      z-index: 2;
+    }
+
+    #message.visible { display: flex; }
+
+    #message.error { color: #f07178; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SecondSelf · Knowledge Graph</h1>
+    <div id="legend"></div>
+    <div id="stats">Loading…</div>
+  </header>
+  <div id="message"></div>
+  <div id="network"></div>
+
+  <script>
+    const PARA_COLORS = {
+      Projects:  { background: "#3d9cf0", border: "#7eb8f5", highlight: "#9eccf8" },
+      Areas:     { background: "#3ecf8e", border: "#7eddb0", highlight: "#a6ebc8" },
+      Resources: { background: "#e6a23c", border: "#efc07a", highlight: "#f5d4a0" },
+      Archives:  { background: "#8b9aab", border: "#b0bac6", highlight: "#c9d1d9" },
+    };
+
+    const DEFAULT_COLOR = {
+      background: "#6b7c8f",
+      border: "#9aabbc",
+      highlight: "#b8c5d1",
+    };
+
+    const LABEL_MAX = 42;
+    const TOOLTIP_MAX = 220;
+
+    function truncate(text, max) {
+      const s = (text || "").trim();
+      if (!s) return "";
+      return s.length > max ? s.slice(0, max).trimEnd() + "…" : s;
+    }
+
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function nodeTitle(node) {
+      const summary = (node.summary || "").trim() || node.id;
+      const preview = (node.content_preview || "").trim();
+      let html = `<b>${escapeHtml(truncate(summary, TOOLTIP_MAX))}</b>`;
+      html += `<br/><i>${escapeHtml(node.para || node.group || "")}</i>`;
+      if (preview && preview !== summary) {
+        html += `<br/><br/>${escapeHtml(truncate(preview, TOOLTIP_MAX))}`;
+      }
+      return html;
+    }
+
+    function showMessage(text, isError) {
+      const el = document.getElementById("message");
+      el.textContent = text;
+      el.classList.add("visible");
+      if (isError) el.classList.add("error");
+      else el.classList.remove("error");
+      document.getElementById("stats").textContent = "";
+    }
+
+    function renderLegend() {
+      const legend = document.getElementById("legend");
+      legend.innerHTML = Object.keys(PARA_COLORS)
+        .map((para) => {
+          const c = PARA_COLORS[para].background;
+          return `<span class="legend-item"><span class="swatch" style="background:${c}"></span>${para}</span>`;
+        })
+        .join("");
+    }
+
+    function buildVisData(graph) {
+      const nodes = (graph.nodes || []).map((n) => {
+        const group = n.group || n.para || "Resources";
+        const colors = PARA_COLORS[group] || DEFAULT_COLOR;
+        const labelSource = (n.label || n.summary || n.id || "").trim();
+        return {
+          id: n.id,
+          label: truncate(labelSource, LABEL_MAX) || n.id,
+          group,
+          title: nodeTitle(n),
+          color: {
+            background: colors.background,
+            border: colors.border,
+            highlight: {
+              background: colors.highlight,
+              border: "#ffffff",
+            },
+            hover: {
+              background: colors.highlight,
+              border: "#ffffff",
+            },
+          },
+          borderWidth: 2,
+          font: { color: "#f4f7fa", size: 13, face: "IBM Plex Sans, Segoe UI, sans-serif" },
+        };
+      });
+
+      const edges = (graph.edges || []).map((e, i) => ({
+        id: `e-${i}`,
+        from: e.source,
+        to: e.target,
+        value: e.weight || 1,
+        color: { color: "#3a4a5c", highlight: "#7eb8f5", hover: "#7eb8f5" },
+        width: 1.5,
+        smooth: { type: "continuous" },
+      }));
+
+      return {
+        nodes: new vis.DataSet(nodes),
+        edges: new vis.DataSet(edges),
+      };
+    }
+
+    function startPulse(network, nodesDataSet) {
+      let growing = true;
+      let width = 2;
+      setInterval(() => {
+        width += growing ? 0.15 : -0.15;
+        if (width >= 3.2) growing = false;
+        if (width <= 1.6) growing = true;
+        const ids = nodesDataSet.getIds();
+        if (!ids.length) return;
+        nodesDataSet.update(ids.map((id) => ({ id, borderWidth: width })));
+      }, 60);
+    }
+
+    function renderGraph(graph) {
+      const meta = graph.metadata || {};
+      const nodeCount = meta.node_count != null ? meta.node_count : (graph.nodes || []).length;
+      const edgeCount = meta.edge_count != null ? meta.edge_count : (graph.edges || []).length;
+
+      document.getElementById("stats").textContent =
+        `${nodeCount} nodes · ${edgeCount} edges` +
+        (meta.generated_at ? ` · built ${meta.generated_at}` : "");
+
+      if (!graph.nodes || graph.nodes.length === 0) {
+        showMessage("No notes yet");
+        return;
+      }
+
+      const container = document.getElementById("network");
+      const data = buildVisData(graph);
+
+      const options = {
+        interaction: {
+          hover: true,
+          tooltipDelay: 120,
+          dragNodes: true,
+          dragView: true,
+          zoomView: true,
+          navigationButtons: false,
+          keyboard: true,
+        },
+        physics: {
+          enabled: true,
+          barnesHut: {
+            gravitationalConstant: -8000,
+            springLength: 150,
+            springConstant: 0.04,
+            damping: 0.4,
+          },
+          stabilization: { iterations: 200 },
+        },
+        nodes: {
+          shape: "dot",
+          size: 18,
+          borderWidthSelected: 4,
+        },
+        edges: {
+          selectionWidth: 3,
+        },
+      };
+
+      const network = new vis.Network(container, data, options);
+
+      // Click: highlight connected edges/nodes
+      network.on("click", (params) => {
+        if (!params.nodes.length) {
+          network.unselectAll();
+          return;
+        }
+        const nodeId = params.nodes[0];
+        const connected = network.getConnectedNodes(nodeId);
+        const connectedEdges = network.getConnectedEdges(nodeId);
+        network.selectNodes([nodeId, ...connected]);
+        network.selectEdges(connectedEdges);
+      });
+
+      startPulse(network, data.nodes);
+    }
+
+    async function loadGraph() {
+      renderLegend();
+      if (typeof INLINE_GRAPH !== "undefined" && INLINE_GRAPH) {
+        try {
+          renderGraph(INLINE_GRAPH);
+        } catch (err) {
+          console.error(err);
+          showMessage("Could not render graph data", true);
+        }
+        return;
+      }
+      try {
+        const res = await fetch("../data/graph.json", { cache: "no-store" });
+        if (!res.ok) {
+          if (res.status === 404) {
+            showMessage("No notes yet");
+            return;
+          }
+          throw new Error(`HTTP ${res.status}`);
+        }
+        let graph;
+        try {
+          graph = await res.json();
+        } catch (parseErr) {
+          console.error(parseErr);
+          showMessage("Could not parse graph.json — rebuild with python build_graph.py", true);
+          return;
+        }
+        renderGraph(graph);
+      } catch (err) {
+        console.error(err);
+        showMessage(
+          "Could not load graph.json. Serve from project root: python -m http.server 8000",
+          true
+        );
+      }
+    }
+
+    loadGraph();
+  </script>
+</body>
+</html>

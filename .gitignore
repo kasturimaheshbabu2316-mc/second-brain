@@ -1,11 +1,29 @@
+# Virtual environment
 .venv/
+
+# Secrets
 .env
+
+# Local captures (personal data)
+raw/
+
+# Derived / generated data
+data/embeddings.pkl
+data/*.tmp
+
+# Python
 __pycache__/
 *.pyc
-data/
-graph.json
+*.pyo
+*.pyd
+.Python
 
-# Ignore all files in wiki recursively, but keep directory structure via .gitkeep
-wiki/**/*
-!wiki/**/.gitkeep
-wiki/.embeddings_cache.json
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+.cursor/
+
+# Local test files
+test.txt
+*.log

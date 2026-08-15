@@ -1,0 +1,318 @@
+{
+  "raw_processed": {
+    "2026-07-09_26f454a4": {
+      "wiki_id": "26f454a4",
+      "classified_at": "2026-07-25T10:26:08Z",
+      "content_hash": "sha256:60afafbd20df1ac0ab0c62c82c0b463c55619ec0fca2a79c1613a45b845dedc5",
+      "para": "Resources",
+      "path": "wiki/Resources/26f454a4.md"
+    },
+    "2026-07-09_2922185b": {
+      "wiki_id": "2922185b",
+      "classified_at": "2026-07-25T10:26:09Z",
+      "content_hash": "sha256:90fdc399a8a3ce9c15a50178e9b864156436b7a0fca299b45a26d9f6c227564e",
+      "para": "Resources",
+      "path": "wiki/Resources/2922185b.md"
+    },
+    "2026-07-09_30e4da53": {
+      "wiki_id": "30e4da53",
+      "classified_at": "2026-07-25T10:26:19Z",
+      "content_hash": "sha256:5db79514c5564f13e328e281e07a2767153e5390d0e4680d01abb0aa70e66a2a",
+      "para": "Resources",
+      "path": "wiki/Resources/30e4da53.md"
+    },
+    "2026-07-09_371ac0c4": {
+      "wiki_id": "371ac0c4",
+      "classified_at": "2026-07-25T10:26:25Z",
+      "content_hash": "sha256:cbea149ba436ad3101fc2dc00a0149b737beb652b03544496558702046217ff8",
+      "para": "Resources",
+      "path": "wiki/Resources/371ac0c4.md"
+    },
+    "2026-07-09_57d3bf91": {
+      "wiki_id": "57d3bf91",
+      "classified_at": "2026-07-25T10:26:30Z",
+      "content_hash": "sha256:44da8b225081441a28672e277dfecc06790c3f0c4f8dfd4d5781b850d7e0faeb",
+      "para": "Projects",
+      "path": "wiki/Projects/57d3bf91.md"
+    },
+    "2026-07-09_5c36e908": {
+      "wiki_id": "5c36e908",
+      "classified_at": "2026-07-25T10:26:54Z",
+      "content_hash": "sha256:e6358009388201ff6003277fd9119134ba7dc5aaedb41f0dafb72e66c4f2fab5",
+      "para": "Projects",
+      "path": "wiki/Projects/5c36e908.md"
+    },
+    "2026-07-09_8302f2f2": {
+      "wiki_id": "8302f2f2",
+      "classified_at": "2026-07-25T10:27:14Z",
+      "content_hash": "sha256:f0d2f0f26e561be47400a9759589510caed0660624e406f42674c0be72747df1",
+      "para": "Resources",
+      "path": "wiki/Resources/8302f2f2.md"
+    },
+    "2026-07-09_8a18a334": {
+      "wiki_id": "8a18a334",
+      "classified_at": "2026-07-25T10:27:15Z",
+      "content_hash": "sha256:829fc679ad0aa069a0f979c19fa5b021c5236689da829011f55fea8e6a5a73e2",
+      "para": "Projects",
+      "path": "wiki/Projects/8a18a334.md"
+    },
+    "2026-07-09_d659e658": {
+      "wiki_id": "d659e658",
+      "classified_at": "2026-07-25T10:27:24Z",
+      "content_hash": "sha256:d25e0dfcac8a582266fbaf194515a48600c7f6bc9ca0d8e3d2ea143bea5f9aff",
+      "para": "Projects",
+      "path": "wiki/Projects/d659e658.md"
+    },
+    "2026-07-09_df523d27": {
+      "wiki_id": "df523d27",
+      "classified_at": "2026-07-25T10:27:27Z",
+      "content_hash": "sha256:84c1dd90eb66be1a43dd60896fbc563cb8914586ad32887b0e92c0696d2e814e",
+      "para": "Projects",
+      "path": "wiki/Projects/df523d27.md"
+    },
+    "2026-07-09_e4b7badb": {
+      "wiki_id": "e4b7badb",
+      "classified_at": "2026-07-25T10:27:30Z",
+      "content_hash": "sha256:f248cca464e9b0fee7356e9dd3af7ba5626a0e73df098a69ae8c277c0157247e",
+      "para": "Areas",
+      "path": "wiki/Areas/e4b7badb.md"
+    },
+    "2026-07-09_eabe1e6c": {
+      "wiki_id": "eabe1e6c",
+      "classified_at": "2026-07-25T10:27:32Z",
+      "content_hash": "sha256:10cd599af32aeecd374e6418ab3fc261ad9b5e84b966cc3903f4a63c499611cc",
+      "para": "Projects",
+      "path": "wiki/Projects/eabe1e6c.md"
+    },
+    "2026-07-09_f616b4e5": {
+      "wiki_id": "f616b4e5",
+      "classified_at": "2026-07-25T10:28:06Z",
+      "content_hash": "sha256:f2f1bb554b5c3d554e9b8f79cdd6ff142734d75052715dc28d15973eca11e321",
+      "para": "Resources",
+      "path": "wiki/Resources/f616b4e5.md"
+    },
+    "2026-07-09_2cdf85aa": {
+      "wiki_id": "2cdf85aa",
+      "classified_at": "2026-07-25T10:26:10Z",
+      "content_hash": "sha256:5458c691b67d1a5e8bad7aa3ba9ed2dd30200c6aac42661e9d3b17b65da87319",
+      "para": "Resources",
+      "path": "wiki/Resources/2cdf85aa.md"
+    },
+    "2026-07-09_531a2103": {
+      "wiki_id": "531a2103",
+      "classified_at": "2026-07-25T10:26:28Z",
+      "content_hash": "sha256:ab5df625bc76dbd4e163bed2dd888df828f90159bb93556525c31821b6541d46",
+      "para": "Resources",
+      "path": "wiki/Resources/531a2103.md"
+    },
+    "2026-07-09_70b97fc9": {
+      "wiki_id": "70b97fc9",
+      "classified_at": "2026-07-25T10:26:57Z",
+      "content_hash": "sha256:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "para": "Archives",
+      "path": "wiki/Archives/70b97fc9.md"
+    },
+    "2026-07-09_c7bab401": {
+      "wiki_id": "c7bab401",
+      "classified_at": "2026-07-25T10:27:18Z",
+      "content_hash": "sha256:abfd3f1357c52d8fbf9d89912080b84a28430e19eb7a27bc50f15776fdb5394f",
+      "para": "Archives",
+      "path": "wiki/Archives/c7bab401.md"
+    },
+    "2026-07-09_cdd17cd7": {
+      "wiki_id": "cdd17cd7",
+      "classified_at": "2026-07-25T10:27:21Z",
+      "content_hash": "sha256:b12f0c79a16492b1480c3c95cc742d1b4613717ccd5905ac46dc34d132aa628e",
+      "para": "Resources",
+      "path": "wiki/Resources/cdd17cd7.md"
+    },
+    "2026-07-16_3acbbbe9": {
+      "wiki_id": "3acbbbe9",
+      "classified_at": "2026-07-25T10:28:08Z",
+      "content_hash": "sha256:35ce928629e82fdce012c46b0921b4aba116f180e5ccfc66629c626838315533",
+      "para": "Projects",
+      "path": "wiki/Projects/3acbbbe9.md"
+    },
+    "2026-07-16_676653ad": {
+      "wiki_id": "676653ad",
+      "classified_at": "2026-07-25T10:28:12Z",
+      "content_hash": "sha256:4621033a919fd263ea0455b7eecce684f3fe8ccfd28d044d563e66d7081774cc",
+      "para": "Resources",
+      "path": "wiki/Resources/676653ad.md"
+    },
+    "2026-07-16_6c9e6d4c": {
+      "wiki_id": "6c9e6d4c",
+      "classified_at": "2026-07-25T10:28:15Z",
+      "content_hash": "sha256:f8e05d73bbfcfffa508aad8b0e397a3555b302f31466310fb65c58ad4617a5c0",
+      "para": "Areas",
+      "path": "wiki/Areas/6c9e6d4c.md"
+    },
+    "2026-07-16_7e12d8ef": {
+      "wiki_id": "7e12d8ef",
+      "classified_at": "2026-07-25T10:28:34Z",
+      "content_hash": "sha256:7e9133831355dc0192757e32a1c85b19347e52a46903bef3ee8bc5bc15ebec76",
+      "para": "Resources",
+      "path": "wiki/Resources/7e12d8ef.md"
+    },
+    "2026-07-16_b0feb01d": {
+      "wiki_id": "b0feb01d",
+      "classified_at": "2026-07-25T10:29:08Z",
+      "content_hash": "sha256:482fbe8a958e3fde8b816faa3761337bf1bb6e3c3eb138bb5f64283cb4dfb6bd",
+      "para": "Resources",
+      "path": "wiki/Resources/b0feb01d.md"
+    },
+    "2026-07-16_b50a1027": {
+      "wiki_id": "b50a1027",
+      "classified_at": "2026-07-25T10:29:10Z",
+      "content_hash": "sha256:7b44a5f87e9bb9e9aeca47c358069beea7ee330599f14f40a5c0985967184ba7",
+      "para": "Resources",
+      "path": "wiki/Resources/b50a1027.md"
+    },
+    "2026-07-18_0e70fa32": {
+      "wiki_id": "0e70fa32",
+      "classified_at": "2026-07-25T10:29:13Z",
+      "content_hash": "sha256:430e8b3046c86a2e81876f4cbbb7e03b3b58fd59e08a401978d918f74ee31f03",
+      "para": "Projects",
+      "path": "wiki/Projects/0e70fa32.md"
+    },
+    "2026-07-18_a8ffa50a": {
+      "wiki_id": "a8ffa50a",
+      "classified_at": "2026-07-25T10:29:16Z",
+      "content_hash": "sha256:e942f6a5fc7f65143a792e7ecdafbb1fb1e7e898cf3954bf89230bb376c5bf65",
+      "para": "Resources",
+      "path": "wiki/Resources/a8ffa50a.md"
+    },
+    "2026-07-18_f038d292": {
+      "wiki_id": "f038d292",
+      "classified_at": "2026-07-25T10:29:18Z",
+      "content_hash": "sha256:5984c76ffa5018c97dfca75ae911870c742a1788db35901fb03b4b8d0dad6b7d",
+      "para": "Resources",
+      "path": "wiki/Resources/f038d292.md"
+    },
+    "2026-07-23_667927da": {
+      "wiki_id": "667927da",
+      "classified_at": "2026-07-25T10:29:21Z",
+      "content_hash": "sha256:79427277b895badcb49223b73b1ee55f3513d2c53d3989cbed4552335d2d08a9",
+      "para": "Resources",
+      "path": "wiki/Resources/667927da.md"
+    },
+    "2026-07-23_d8b803c0": {
+      "wiki_id": "d8b803c0",
+      "classified_at": "2026-07-25T10:29:24Z",
+      "content_hash": "sha256:cb28d6c32f2dd088e41af251ff8e97d06bd357059aedf80c05abf2dcd5e5f823",
+      "para": "Resources",
+      "path": "wiki/Resources/d8b803c0.md"
+    },
+    "2026-07-25_64ea6351": {
+      "wiki_id": "64ea6351",
+      "classified_at": "2026-07-25T10:29:26Z",
+      "content_hash": "sha256:ac7252675aaf2187f1abee48646b69d3b430666e124703442f9105bc9fe7a70f",
+      "para": "Archives",
+      "path": "wiki/Archives/64ea6351.md"
+    },
+    "2026-07-25_67df84c9": {
+      "wiki_id": "67df84c9",
+      "classified_at": "2026-07-25T10:29:29Z",
+      "content_hash": "sha256:71e5f709f6e18f86e08e2b4f3454bc334c98946c2ef99aa87f4c49ba70babfff",
+      "para": "Projects",
+      "path": "wiki/Projects/67df84c9.md"
+    }
+  },
+  "embeddings_version": "all-MiniLM-L6-v2",
+  "last_graph_build": "2026-07-25T10:29:31Z",
+  "wiki_embeddings": {
+    "3acbbbe9": {
+      "content_hash": "sha256:622af56773c56e260cb53fd999c84e85a277350de6e3b0b6536e9ddd3371a789"
+    },
+    "57d3bf91": {
+      "content_hash": "sha256:2f793ef2a77d4baed429e8b5e21b50b6da7a9553ed8be619037f284b4d7759ac"
+    },
+    "5c36e908": {
+      "content_hash": "sha256:d12a3f44cc1361fff8a41d22674c41c39319135b8cc229528ffd74ddc7a57ed7"
+    },
+    "8a18a334": {
+      "content_hash": "sha256:f20d9344594dcb6febfca67b43497b1ae99c0ade5570e1bfa952d1e8ba24ba55"
+    },
+    "d659e658": {
+      "content_hash": "sha256:9e8662757b2dab173b716b15ed39250b38073553e3ee0176b0c1ca52e782ca24"
+    },
+    "df523d27": {
+      "content_hash": "sha256:9b143fd65289134d7966e51e2d98e5e76446dd56188231a5387d8e04e3235ba9"
+    },
+    "eabe1e6c": {
+      "content_hash": "sha256:faf58ed627847f43930be3108b6df005513627045797f4f40f1af1cb44189bfc"
+    },
+    "6c9e6d4c": {
+      "content_hash": "sha256:7c46a714630f2f4e5c68b47f2cba8d4124275d26dd9ea215e057bf06e11bae75"
+    },
+    "e4b7badb": {
+      "content_hash": "sha256:b0ad92523f5598b9ea98070e2ebd3223baf4be8b24f2e9b1aea1c3b656191d7b"
+    },
+    "26f454a4": {
+      "content_hash": "sha256:ba6622e83edf6d911dd8760fe6b9e2b3eb030eecef05b56f39700dc47a94a20d"
+    },
+    "2922185b": {
+      "content_hash": "sha256:5f3b726967db6d32a2fc6a2520526aa5f8647a4f79973731b36ff8b9905fbf8d"
+    },
+    "2cdf85aa": {
+      "content_hash": "sha256:66919f9ae90a418bbd31c4852404f8788c953d5143903c3055b9adf50638ee50"
+    },
+    "30e4da53": {
+      "content_hash": "sha256:e32f5d240c8f7bf98723b19917fb8f79971a45e3be8c4c36846833a77aac778d"
+    },
+    "371ac0c4": {
+      "content_hash": "sha256:239dbb4aaa88b8d04335e66f8567b87acb3c1a778045dba2aaf2a743d9399c48"
+    },
+    "531a2103": {
+      "content_hash": "sha256:8a9a6102638ba72e866639b42afef5da9fb27942ff376203b6f777c8e253fb2c"
+    },
+    "676653ad": {
+      "content_hash": "sha256:fe4525b31450d186c199966c155bb37dca41beea2460f549730ca79563274360"
+    },
+    "7e12d8ef": {
+      "content_hash": "sha256:38fc1fb050197afe899328df58d2da59bcb0078ad956ad7d51740f9412aa27c7"
+    },
+    "8302f2f2": {
+      "content_hash": "sha256:a809d8d4a506bfe7000cc569f50ba62b33e4756c43a4a36f52acc4f4cbd72685"
+    },
+    "b0feb01d": {
+      "content_hash": "sha256:845c8e9c96ccb339d375b90b41858077b893de2c81b805f3efc81e7477908141"
+    },
+    "b50a1027": {
+      "content_hash": "sha256:a3ea45aa11cfc39e1bb7744fe38f951061de3fcfca553b1938af246d7b5c92a9"
+    },
+    "cdd17cd7": {
+      "content_hash": "sha256:6847054f212a7d39df5b416b7dc94975fb26e0b56309be45dcb66efa23230dc7"
+    },
+    "f616b4e5": {
+      "content_hash": "sha256:6112c3d2561b440eae4022f509828d456e67f0c1a43beaf79a8b74c0943939f3"
+    },
+    "70b97fc9": {
+      "content_hash": "sha256:a5044f131226f8da1e1985b13c1185b161b9f890e7cf55ef5b2cb9d3b95db0f8"
+    },
+    "c7bab401": {
+      "content_hash": "sha256:91d4ad697fc6533e25585aab8e39e81766870675e11564a621d40b643e93aaab"
+    },
+    "0e70fa32": {
+      "content_hash": "sha256:73bd3948b887c64beacb2c933a3018ec27ff0e33c5cd58b3c40962b8363b4ebc"
+    },
+    "a8ffa50a": {
+      "content_hash": "sha256:ac5aaf1916cfc70f4614398550f4f72c80d11e3b090f8b4fef22e6d426fdd136"
+    },
+    "f038d292": {
+      "content_hash": "sha256:ef93bf9354c8e10043a95cc5cac0d0a7b2a90cf550a8b3422ad277ddb2fa7e1a"
+    },
+    "667927da": {
+      "content_hash": "sha256:ce1122cf0cdbb2865e334c814e870a5e406373fed0f8b1b50855ce62d8ccadfe"
+    },
+    "d8b803c0": {
+      "content_hash": "sha256:4bd7723bb5878cd30ae99ae6a3dfcb8fbeef8115c1b76abe149c4018f6f219d5"
+    },
+    "64ea6351": {
+      "content_hash": "sha256:cc8885c1b2b0a65492461d317745b7288127e8d28a9bfb492046f82ddde14424"
+    },
+    "67df84c9": {
+      "content_hash": "sha256:d5e4cedd99ac9825bf47e9e0e2cd3e216dff5fb6fe8e0315ed2e898747a1153e"
+    }
+  }
+}

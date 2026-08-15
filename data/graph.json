@@ -1,0 +1,487 @@
+{
+  "nodes": [
+    {
+      "id": "0e70fa32",
+      "label": "The user is currently attending a live session at Masai.",
+      "para": "Projects",
+      "tags": [
+        "masai",
+        "live-session"
+      ],
+      "summary": "The user is currently attending a live session at Masai.",
+      "content_preview": "18th July 17:24PM -- Currently I am attending Masai Live Session Related - f038d292",
+      "group": "Projects"
+    },
+    {
+      "id": "3acbbbe9",
+      "label": "The goal is to complete the SecondSelf Librarian phase by auto-linking notes at a cosine threshold of 0.75 and then shipping pipeline.py.",
+      "para": "Projects",
+      "tags": [
+        "secondself",
+        "librarian",
+        "project-management",
+        "deadline",
+        "pipeline"
+      ],
+      "summary": "The goal is to complete the SecondSelf Librarian phase by auto-linking notes at a cosine threshold of 0.75 and then shipping pipeline.py.",
+      "content_preview": "Active project: finish SecondSelf Librarian phase — auto-link notes at cosine ≥ 0.75, then ship pipeline.py.",
+      "group": "Projects"
+    },
+    {
+      "id": "57d3bf91",
+      "label": "A list of tasks to complete in relation to the PARA method and its application.",
+      "para": "Projects",
+      "tags": [
+        "todo",
+        "groq",
+        "llama",
+        "classification",
+        "prompt",
+        "para"
+      ],
+      "summary": "A list of tasks to complete in relation to the PARA method and its application.",
+      "content_preview": "Todo: set up Groq API key, test Llama 3.1 classification prompts, tune PARA categories on my captures.",
+      "group": "Projects"
+    },
+    {
+      "id": "5c36e908",
+      "label": "A 4-week project to build an end-to-end system for capturing, organizing, and querying personal knowledge using AI and natural language search.",
+      "para": "Projects",
+      "tags": [
+        "secondself",
+        "ai-second-brain",
+        "note-taking",
+        "knowledge-management",
+        "natural-language-search",
+        "graph-visualization"
+      ],
+      "summary": "A 4-week project to build an end-to-end system for capturing, organizing, and querying personal knowledge using AI and natural language search.",
+      "content_preview": "Filename: PROBLEM STATEMENT.md Project: SecondSelf — Your Personal AI Second Brain The Big Problem Every notes app fails the same way: you capture hundreds of notes, bookmarks, PDFs, and ideas — and t…",
+      "group": "Projects"
+    },
+    {
+      "id": "67df84c9",
+      "label": "Varun, Shailendra, and Pranav are engaged in a collaborative AI automation learning effort.",
+      "para": "Projects",
+      "tags": [
+        "ai",
+        "automation",
+        "learning"
+      ],
+      "summary": "Varun, Shailendra, and Pranav are engaged in a collaborative AI automation learning effort.",
+      "content_preview": "Varun, Shailendra and pranav are learning AI automation",
+      "group": "Projects"
+    },
+    {
+      "id": "8a18a334",
+      "label": "Building a personal knowledge graph using sentence-transformers for local embeddings and vis-network for exploration.",
+      "para": "Projects",
+      "tags": [
+        "knowledge-graph",
+        "sentence-transformers",
+        "vis-network"
+      ],
+      "summary": "Building a personal knowledge graph using sentence-transformers for local embeddings and vis-network for exploration.",
+      "content_preview": "Active project: build a personal knowledge graph with sentence-transformers for local embeddings and vis-network for exploration. Related - 5c36e908",
+      "group": "Projects"
+    },
+    {
+      "id": "d659e658",
+      "label": "Transition to ML engineering by Q4 with a focus on RAG systems, embeddings, and production Python.",
+      "para": "Projects",
+      "tags": [
+        "career",
+        "ml-engineering",
+        "transition",
+        "rag-systems",
+        "embeddings",
+        "production-python"
+      ],
+      "summary": "Transition to ML engineering by Q4 with a focus on RAG systems, embeddings, and production Python.",
+      "content_preview": "Career goal: transition to ML engineering by Q4. Focus on RAG systems, embeddings, and production Python.",
+      "group": "Projects"
+    },
+    {
+      "id": "df523d27",
+      "label": "The URL https://share.streamlit.io/ is a deployment target for the SecondSelf app.",
+      "para": "Projects",
+      "tags": [
+        "secondself",
+        "deployment",
+        "streamlit",
+        "app"
+      ],
+      "summary": "The URL https://share.streamlit.io/ is a deployment target for the SecondSelf app.",
+      "content_preview": "URL: https://share.streamlit.io/ User notes: Deployment target for the final SecondSelf app",
+      "group": "Projects"
+    },
+    {
+      "id": "eabe1e6c",
+      "label": "Weekly milestones for the SecondSelf project involve shipping one phase per week on real data.",
+      "para": "Projects",
+      "tags": [
+        "secondself",
+        "milestones",
+        "weekly",
+        "productivity"
+      ],
+      "summary": "Weekly milestones for the SecondSelf project involve shipping one phase per week on real data.",
+      "content_preview": "SecondSelf weekly milestones: capture → classify → link → graph → ask. Ship one phase per week on real data.",
+      "group": "Projects"
+    },
+    {
+      "id": "6c9e6d4c",
+      "label": "The user has a weekly review habit on Sundays.",
+      "para": "Areas",
+      "tags": [
+        "weekly-review",
+        "habit",
+        "sunday",
+        "pipeline.py",
+        "wiki-links"
+      ],
+      "summary": "The user has a weekly review habit on Sundays.",
+      "content_preview": "Area: weekly review habit — every Sunday, run pipeline.py process and skim new wiki links for quality.",
+      "group": "Areas"
+    },
+    {
+      "id": "e4b7badb",
+      "label": "The author identifies information scatter as a significant problem.",
+      "para": "Areas",
+      "tags": [
+        "productivity",
+        "organization",
+        "self-improvement"
+      ],
+      "summary": "The author identifies information scatter as a significant problem.",
+      "content_preview": "Journal: information scatter is the real problem — bookmarks, PDFs, and ideas never resurface. A brain that organizes itself is the fix.",
+      "group": "Areas"
+    },
+    {
+      "id": "26f454a4",
+      "label": "A list of required Python packages for a project.",
+      "para": "Resources",
+      "tags": [
+        "dependencies",
+        "pip",
+        "requirements",
+        "streamlit",
+        "groq"
+      ],
+      "summary": "A list of required Python packages for a project.",
+      "content_preview": "Filename: requirements.txt streamlit =1.32 groq =0.4 sentence-transformers =2.3 numpy =1.24 pyyaml =6.0 pypdf =4.0 requests =2.31 beautifulsoup4 =4.12 python-dotenv =1.0",
+      "group": "Resources"
+    },
+    {
+      "id": "2922185b",
+      "label": "A detailed system architecture for a personal knowledge brain that captures anything, self-organizes with AI, visualizes as a graph, and answers questions via RAG.",
+      "para": "Resources",
+      "tags": [
+        "secondself",
+        "knowledge-management",
+        "para-method",
+        "architecture",
+        "system-design"
+      ],
+      "summary": "A detailed system architecture for a personal knowledge brain that captures anything, self-organizes with AI, visualizes as a graph, and answers questions via RAG.",
+      "content_preview": "Filename: architecture.md SecondSelf — Detailed System Architecture Architecture for a personal knowledge brain that captures anything, self-organizes with AI, visualizes as a graph, and answers quest…",
+      "group": "Resources"
+    },
+    {
+      "id": "2cdf85aa",
+      "label": "A collection of external links to reference material and personal profiles.",
+      "para": "Resources",
+      "tags": [
+        "links",
+        "reference",
+        "groq",
+        "linkedin"
+      ],
+      "summary": "A collection of external links to reference material and personal profiles.",
+      "content_preview": "Filename: test.txt https://console.groq.com/settings/limits https://www.linkedin.com/in/sakshamarora9575/",
+      "group": "Resources"
+    },
+    {
+      "id": "30e4da53",
+      "label": "A pre-trained sentence embedding model for tasks like clustering or semantic search.",
+      "para": "Resources",
+      "tags": [
+        "sentence-transformers",
+        "all-minilm-l6-v2",
+        "huggingface",
+        "nlp",
+        "model",
+        "embedding"
+      ],
+      "summary": "A pre-trained sentence embedding model for tasks like clustering or semantic search.",
+      "content_preview": "URL: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 Title: sentence-transformers/all-MiniLM-L6-v2 · Hugging Face Description: We’re on a journey to advance and democratize artificial in…",
+      "group": "Resources"
+    },
+    {
+      "id": "371ac0c4",
+      "label": "GroqCloud is a cloud-based platform for building and deploying AI models, offering a free LLM API for PARA classification and answer synthesis.",
+      "para": "Resources",
+      "tags": [
+        "groq-cloud",
+        "ai-platform",
+        "llm-api",
+        "machine-learning",
+        "cloud-services",
+        "natural-language-processing"
+      ],
+      "summary": "GroqCloud is a cloud-based platform for building and deploying AI models, offering a free LLM API for PARA classification and answer synthesis.",
+      "content_preview": "URL: https://console.groq.com/ Title: GroqCloud GroqCloud Docs Login Log In Build Fast Join 2M+ developers building on GroqCloud ™ We deliver inference with unmatched speed and cost, so you can ship f…",
+      "group": "Resources"
+    },
+    {
+      "id": "531a2103",
+      "label": "A guide to the PARA method for organizing personal knowledge.",
+      "para": "Resources",
+      "tags": [
+        "para-guide",
+        "classification",
+        "methodology"
+      ],
+      "summary": "A guide to the PARA method for organizing personal knowledge.",
+      "content_preview": "...",
+      "group": "Resources"
+    },
+    {
+      "id": "667927da",
+      "label": "A recorded video about knowledge graph was uploaded on July 21st.",
+      "para": "Resources",
+      "tags": [
+        "knowledge-graph",
+        "video",
+        "upload"
+      ],
+      "summary": "A recorded video about knowledge graph was uploaded on July 21st.",
+      "content_preview": "Recorded Video on knowledge graph was uploaded on 21st July Related - d8b803c0",
+      "group": "Resources"
+    },
+    {
+      "id": "676653ad",
+      "label": "A tip for improving RAG retrieval performance by chunking notes into semantic sections.",
+      "para": "Resources",
+      "tags": [
+        "rag-retrieval",
+        "note-embedding",
+        "mini-lm",
+        "chunking",
+        "semantic-sections"
+      ],
+      "summary": "A tip for improving RAG retrieval performance by chunking notes into semantic sections.",
+      "content_preview": "RAG retrieval tip: chunk notes by semantic section before embedding; keep chunk size 300-500 tokens for MiniLM.",
+      "group": "Resources"
+    },
+    {
+      "id": "7e12d8ef",
+      "label": "A JavaScript library for creating dynamic, customizable network views.",
+      "para": "Resources",
+      "tags": [
+        "visjs",
+        "network",
+        "visualization",
+        "javascript",
+        "library",
+        "github"
+      ],
+      "summary": "A JavaScript library for creating dynamic, customizable network views.",
+      "content_preview": "URL: https://github.com/visjs/vis-network Title: GitHub - visjs/vis-network: :dizzy: Display dynamic, automatically organised, customizable network views. · GitHub Description: :dizzy: Display dynamic…",
+      "group": "Resources"
+    },
+    {
+      "id": "8302f2f2",
+      "label": "A 2017 paper proposing the Transformer architecture for sequence transduction tasks.",
+      "para": "Resources",
+      "tags": [
+        "transformer",
+        "machine-learning",
+        "nlp",
+        "arxiv",
+        "paper",
+        "research"
+      ],
+      "summary": "A 2017 paper proposing the Transformer architecture for sequence transduction tasks.",
+      "content_preview": "URL: https://arxiv.org/abs/1706.03762 Title: [1706.03762] Attention Is All You Need Description: Abstract page for arXiv paper 1706.03762: Attention Is All You Need [1706.03762] Attention Is All You N…",
+      "group": "Resources"
+    },
+    {
+      "id": "a8ffa50a",
+      "label": "A link to Saksham's video on the Masai School platform.",
+      "para": "Resources",
+      "tags": [
+        "reference",
+        "video",
+        "masai-school",
+        "platform",
+        "saksham"
+      ],
+      "summary": "A link to Saksham's video on the Masai School platform.",
+      "content_preview": "I need watch Saksham's video on this platform - https://masai-live.masaischool.com/ Related - f038d292",
+      "group": "Resources"
+    },
+    {
+      "id": "b0feb01d",
+      "label": "Documentation for the SentenceTransformers library, a Python module for using and training state-of-the-art embedding and reranker models.",
+      "para": "Resources",
+      "tags": [
+        "sentence-transformers",
+        "sbert",
+        "hugging-face",
+        "nlp",
+        "documentation",
+        "reference-material"
+      ],
+      "summary": "Documentation for the SentenceTransformers library, a Python module for using and training state-of-the-art embedding and reranker models.",
+      "content_preview": "URL: https://www.sbert.net/ Title: SentenceTransformers Documentation — Sentence Transformers documentation SentenceTransformers Documentation — Sentence Transformers documentation SentenceTransformer…",
+      "group": "Resources"
+    },
+    {
+      "id": "b50a1027",
+      "label": "A note on system design practices for ML serving, specifically batching, caching embeddings, and Groq rate limits.",
+      "para": "Resources",
+      "tags": [
+        "ml-serving",
+        "system-design",
+        "batching",
+        "caching",
+        "groq"
+      ],
+      "summary": "A note on system design practices for ML serving, specifically batching, caching embeddings, and Groq rate limits.",
+      "content_preview": "Career note: practice system design for ML serving — batching, caching embeddings, and Groq rate limits.",
+      "group": "Resources"
+    },
+    {
+      "id": "cdd17cd7",
+      "label": "A URL with optional user notes, likely a reference or online resource",
+      "para": "Resources",
+      "tags": [
+        "reference-material",
+        "online-resource"
+      ],
+      "summary": "A URL with optional user notes, likely a reference or online resource",
+      "content_preview": "URL: https://... User notes: optional notes",
+      "group": "Resources"
+    },
+    {
+      "id": "d8b803c0",
+      "label": "A recorded video about the knowledge graph was added on July 21st.",
+      "para": "Resources",
+      "tags": [
+        "knowledge-graph",
+        "video",
+        "recorded"
+      ],
+      "summary": "A recorded video about the knowledge graph was added on July 21st.",
+      "content_preview": "Recorded Video of Knowledge graph was added on 21st July Related - 667927da",
+      "group": "Resources"
+    },
+    {
+      "id": "f038d292",
+      "label": "A learning platform hosted by Masai School.",
+      "para": "Resources",
+      "tags": [
+        "masai",
+        "live",
+        "school",
+        "learning",
+        "platform"
+      ],
+      "summary": "A learning platform hosted by Masai School.",
+      "content_preview": "URL: https://masai-live.masaischool.com/ Title: Masai Live Masai Live Related - 0e70fa32 - a8ffa50a",
+      "group": "Resources"
+    },
+    {
+      "id": "f616b4e5",
+      "label": "A LinkedIn profile for Saksham Arora, a software engineer with 4+ years of experience building large-scale distributed systems at Intuit.",
+      "para": "Resources",
+      "tags": [
+        "linkedin-profile",
+        "software-engineer",
+        "intuit",
+        "saksham-arora",
+        "distributed-systems",
+        "large-scale-systems",
+        "ai",
+        "machine-learning"
+      ],
+      "summary": "A LinkedIn profile for Saksham Arora, a software engineer with 4+ years of experience building large-scale distributed systems at Intuit.",
+      "content_preview": "URL: https://www.linkedin.com/in/sakshamarora9575/ Title: Saksham Arora - Intuit LinkedIn Description: Software Engineer with 4+ years of experience building large-scale distributed systems at… · Expe…",
+      "group": "Resources"
+    },
+    {
+      "id": "64ea6351",
+      "label": "Meeting minutes from a conversation between Shailendra, Pranav, and Varun on July 25th",
+      "para": "Archives",
+      "tags": [
+        "meeting-minutes",
+        "note"
+      ],
+      "summary": "Meeting minutes from a conversation between Shailendra, Pranav, and Varun on July 25th",
+      "content_preview": "25th July 15:54 PM Shailendra pranav and Varun",
+      "group": "Archives"
+    },
+    {
+      "id": "70b97fc9",
+      "label": "This is a test item, likely a trivial or test capture.",
+      "para": "Archives",
+      "tags": [],
+      "summary": "This is a test item, likely a trivial or test capture.",
+      "content_preview": "test",
+      "group": "Archives"
+    },
+    {
+      "id": "c7bab401",
+      "label": "The name 'saksham' is mentioned, but no context is provided.",
+      "para": "Archives",
+      "tags": [],
+      "summary": "The name 'saksham' is mentioned, but no context is provided.",
+      "content_preview": "saksham",
+      "group": "Archives"
+    }
+  ],
+  "edges": [
+    {
+      "source": "0e70fa32",
+      "target": "f038d292",
+      "weight": 1.0,
+      "type": "semantic"
+    },
+    {
+      "source": "2922185b",
+      "target": "5c36e908",
+      "weight": 1.0,
+      "type": "semantic"
+    },
+    {
+      "source": "30e4da53",
+      "target": "b0feb01d",
+      "weight": 1.0,
+      "type": "semantic"
+    },
+    {
+      "source": "5c36e908",
+      "target": "8a18a334",
+      "weight": 1.0,
+      "type": "semantic"
+    },
+    {
+      "source": "667927da",
+      "target": "d8b803c0",
+      "weight": 1.0,
+      "type": "semantic"
+    },
+    {
+      "source": "a8ffa50a",
+      "target": "f038d292",
+      "weight": 1.0,
+      "type": "semantic"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-07-25T10:29:31Z",
+    "node_count": 31,
+    "edge_count": 6
+  }
+}
