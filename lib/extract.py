@@ -154,7 +154,7 @@ def _fetch_url_text(url: str) -> str:
 
         title = (soup.title.string or "").strip() if soup.title else ""
         meta_desc = ""
-        meta = soup.find("meta", attrs={"name": re.compile(r"^description$", re.I)})
+        meta = soup.find("meta", attrs={"name": re.compile(r"^description$", re.IGNORECASE)})
         if meta and meta.get("content"):
             meta_desc = str(meta["content"]).strip()
 

@@ -1,6 +1,6 @@
 import os
-import sys
 import pickle
+import sys
 
 PKL_PATH = os.path.join("data", "embeddings.pkl")
 
@@ -12,7 +12,7 @@ def main():
     try:
         with open(PKL_PATH, "rb") as f:
             data = pickle.load(f)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"Error loading pickle file: {e}")
         sys.exit(1)
         

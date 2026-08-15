@@ -10,6 +10,7 @@ from typing import Any
 
 # Use macOS/system trust store — required on some Python builds (e.g. 3.14)
 try:
+    # pyrefly: ignore [missing-import]
     import truststore
 
     truststore.inject_into_ssl()
@@ -263,26 +264,23 @@ Content:
 ---
 """
 
-    try:
-        response = call_llm(prompt, system=system, temperature=0.2, max_tokens=512)
-        parsed = _parse_classification_json(response, content)
-        if parsed is not None:
-            return parsed
+    response = call_llm(prompt, system=system, temperature=0.2, max_tokens=512)
+    parsed = _parse_classification_json(response, content)
+    if parsed is not None:
+        return parsed
 
-        # CLS-13: retry once on invalid JSON
-        retry_prompt = (
-            prompt
-            + "\n\nYour previous reply was not valid JSON. "
-            "Reply with ONLY the JSON object."
-        )
-        response = call_llm(
-            retry_prompt, system=system, temperature=0.1, max_tokens=512
-        )
-        parsed = _parse_classification_json(response, content)
-        if parsed is not None:
-            return parsed
-    except LLMError:
-        raise
+    # CLS-13: retry once on invalid JSON
+    retry_prompt = (
+        prompt
+        + "\n\nYour previous reply was not valid JSON. "
+        "Reply with ONLY the JSON object."
+    )
+    response = call_llm(
+        retry_prompt, system=system, temperature=0.1, max_tokens=512
+    )
+    parsed = _parse_classification_json(response, content)
+    if parsed is not None:
+        return parsed
 
     return _fallback_classification(content)
 
@@ -306,10 +304,7 @@ def synthesize_answer(context: str, question: str) -> str:
 
 Question: {question}
 """
-    try:
-        answer = call_llm(prompt, system=system, temperature=0.3, max_tokens=1024)
-    except LLMError:
-        raise
+    answer = call_llm(prompt, system=system, temperature=0.3, max_tokens=1024)
     if not answer.strip():
         return "Could not generate an answer."
     return answer

@@ -37,9 +37,7 @@ def _should_process(capture: RawCapture, index_raw: dict) -> bool:
         return True
     stored_hash = entry.get("content_hash")
     current_hash = capture.meta.content_hash
-    if current_hash and stored_hash and current_hash != stored_hash:
-        return True
-    return False
+    return bool(current_hash and stored_hash and current_hash != stored_hash)
 
 
 def _clean_body(text: str) -> str:

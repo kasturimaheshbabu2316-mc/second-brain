@@ -113,7 +113,7 @@ def load_env() -> dict:
     try:
         for k in st.secrets:
             env[k] = st.secrets[k]
-    except Exception:
+    except Exception:  # noqa: S110, BLE001
         pass
     # Load from local .env file if it exists
     if os.path.exists(".env"):

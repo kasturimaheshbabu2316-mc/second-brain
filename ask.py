@@ -7,7 +7,12 @@ import argparse
 import re
 import sys
 
-from lib.embeddings import EmbeddingError, cosine_similarity, embed_text, load_embeddings
+from lib.embeddings import (
+    EmbeddingError,
+    cosine_similarity,
+    embed_text,
+    load_embeddings,
+)
 from lib.llm import LLMError, synthesize_answer
 from lib.models import AskResult, AskSource, WikiNote
 from lib.storage import read_wiki_notes

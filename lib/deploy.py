@@ -34,7 +34,7 @@ def inject_streamlit_secrets() -> None:
 
     try:
         secrets = st.secrets
-    except Exception:
+    except Exception:  # noqa: BLE001
         return
 
     for key in ("GROQ_API_KEY",):
@@ -42,7 +42,7 @@ def inject_streamlit_secrets() -> None:
             continue
         try:
             value = str(secrets[key]).strip()
-        except Exception:
+        except Exception:  # noqa: S112, BLE001
             continue
         if value and value != "your_key_here":
             os.environ[key] = value

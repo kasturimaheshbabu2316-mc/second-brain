@@ -1,11 +1,9 @@
-import os
-import sys
 import json
-import re
-import pathlib
-import urllib.parse
+import os
 import pickle
-from datetime import datetime
+import re
+import sys
+
 import numpy as np
 
 # Try importing sentence_transformers
@@ -41,9 +39,7 @@ def parse_yaml_frontmatter(content: str) -> tuple[dict, str]:
                     # Parse lists e.g., tags: [tag1, tag2] or links: []
                     if val.startswith("[") and val.endswith("]"):
                         val = [item.strip().strip("'\"") for item in val[1:-1].split(",") if item.strip()]
-                    elif val.startswith('"') and val.endswith('"'):
-                        val = val[1:-1]
-                    elif val.startswith("'") and val.endswith("'"):
+                    elif val.startswith('"') and val.endswith('"') or val.startswith("'") and val.endswith("'"):
                         val = val[1:-1]
                     frontmatter[key] = val
     return frontmatter, body
@@ -79,7 +75,7 @@ def load_cache() -> dict:
         try:
             with open(CACHE_FILE, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"Warning: Failed to load embeddings cache ({e}). Initializing empty cache.", file=sys.stderr)
     return {}
 
@@ -89,7 +85,7 @@ def save_cache(cache: dict):
         os.makedirs(WIKI_DIR, exist_ok=True)
         with open(CACHE_FILE, "w", encoding="utf-8") as f:
             json.dump(cache, f, indent=2)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"Warning: Failed to save JSON embeddings cache ({e}).", file=sys.stderr)
         
     try:
@@ -99,7 +95,7 @@ def save_cache(cache: dict):
         with open(pkl_path, "wb") as f:
             pickle.dump(cache, f)
         print(f"Successfully saved pickle embeddings to {pkl_path}")
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"Warning: Failed to save pickle embeddings ({e}).", file=sys.stderr)
 
 def main():
@@ -139,7 +135,7 @@ def main():
                         "word_count": word_count,
                         "mtime": os.path.getmtime(filepath)
                     })
-                except Exception as e:
+                except Exception as e:  # noqa: BLE001
                     print(f"Warning: Failed to parse {filepath}: {e}", file=sys.stderr)
                     
     # Filter notes that have enough content
@@ -232,7 +228,6 @@ def main():
             
             for note_b in related:
                 note_b_abs_path = os.path.abspath(note_b["path"])
-                note_b_uri = pathlib.Path(note_b_abs_path).as_uri()
                 related_lines.append(f"- [[{note_b['title']}]](file:///{note_b_abs_path.replace(os.sep, '/')})")
                 yaml_links.append(note_b["title"])
                 

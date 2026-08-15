@@ -39,7 +39,7 @@ def load_model():
     try:
         print(f"Loading embedding model ({MODEL_NAME})...", file=sys.stderr)
         _model = SentenceTransformer(MODEL_NAME)
-    except Exception as exc:  # noqa: BLE001 — first-download / offline failures
+    except Exception as exc:
         raise EmbeddingError(
             f"Failed to load embedding model '{MODEL_NAME}'. "
             "Check your network connection (first run downloads ~80MB) "
@@ -121,7 +121,7 @@ def load_embeddings() -> dict[str, np.ndarray]:
     for note_id, vector in data.items():
         try:
             result[str(note_id)] = np.asarray(vector, dtype=np.float32).reshape(-1)
-        except Exception:  # noqa: BLE001
+        except Exception:  # noqa: S112, BLE001
             continue
     return result
 

@@ -175,9 +175,8 @@ def read_raw_captures(*, unprocessed_only: bool = False) -> list[RawCapture]:
         raw = _parse_raw_capture(capture_dir)
         if raw is None:
             continue
-        if unprocessed_only and index is not None:
-            if raw.folder_id in index.raw_processed:
-                continue
+        if unprocessed_only and index is not None and raw.folder_id in index.raw_processed:
+            continue
         captures.append(raw)
 
     return captures
@@ -194,9 +193,9 @@ def load_index() -> IndexState:
     try:
         data = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
-            raise ValueError("index.json root must be an object")
+            raise TypeError("index.json root must be an object")
         return IndexState.from_dict(data)
-    except (json.JSONDecodeError, ValueError, OSError):
+    except (json.JSONDecodeError, ValueError, TypeError, OSError):
         return IndexState()
 
 

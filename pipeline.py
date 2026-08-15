@@ -20,8 +20,8 @@ def cmd_classify(force: bool = False) -> int:
 
 
 def cmd_link(threshold: float = 0.55, force: bool = False) -> int:
-    from link import link_notes
     from lib.embeddings import EmbeddingError
+    from link import link_notes
 
     try:
         link_notes(threshold=threshold, force=force)
